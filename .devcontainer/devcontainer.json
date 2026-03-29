@@ -1,6 +1,6 @@
 {
   "name": "R Environment",
-  "image": "mcr.microsoft.com/devcontainers/r:4",
+  "image": "ghcr.io/rocker-org/devcontainer/tidyverse:4",
   "customizations": {
     "vscode": {
       "settings": {
@@ -15,5 +15,5 @@
       ]
     }
   },
-  "postCreateCommand": "Rscript -e 'install.packages(c(\"tidyverse\", \"languageserver\", \"ncdf4\", \"sf\"), repos=\"https://cloud.r-project.org\")'"
+  "postCreateCommand": "Rscript -e 'install.packages(c(\"languageserver\", \"ncdf4\", \"sf\"), repos=\"https://cloud.r-project.org\")'"
 }
