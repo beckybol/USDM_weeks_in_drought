@@ -1,0 +1,19 @@
+{
+  "name": "R Environment",
+  "image": "mcr.microsoft.com/devcontainers/r:4",
+  "customizations": {
+    "vscode": {
+      "settings": {
+        "r.alwaysUseActiveTerminal": true,
+        "r.bracketedPaste": true,
+        "r.rpath.linux": "/usr/local/bin/R"
+      },
+      "extensions": [
+        "REditorSupport.r",
+        "reditorsupport.r-lsp",
+        "eamodio.gitlens"
+      ]
+    }
+  },
+  "postCreateCommand": "Rscript -e 'install.packages(c(\"tidyverse\", \"languageserver\", \"ncdf4\", \"sf\"), repos=\"https://cloud.r-project.org\")'"
+}
